@@ -14,7 +14,7 @@ chrome.runtime.onInstalled.addListener(() => {
             {
               header: "Referer",
               operation: "set",
-              value: chrome.runtime.id,
+              value: chrome.runtime.getURL(""),
             }
           ]
         },

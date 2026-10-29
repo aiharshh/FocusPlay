@@ -5,15 +5,31 @@
   "description": "Your space to focus.",
   "permissions": [
     "activeTab",
+    "tabs",
     "declarativeNetRequestWithHostAccess"
   ],
   "host_permissions": [
     "https://www.youtube.com/*"
   ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; style-src 'self' 'unsafe-inline'; frame-src https://www.youtube.com; connect-src https://www.youtube.com; default-src 'self'"
+  },
   "background": {
     "service_worker": "background.js"
   },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "action": {
-    "default_title": "Open in FocusPlay"
+    "default_title": "Open in FocusPlay",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   }
 }
