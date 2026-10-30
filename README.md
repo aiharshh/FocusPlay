@@ -2,86 +2,73 @@
 
 **Your space to focus.**
 
-FocusPlay is a Chrome extension designed to provide a clean, distraction-free environment for watching YouTube videos. Instead of staying on YouTube's browsing interface, users can open a selected video in a dedicated viewing page focused on the content.
+FocusPlay is a lightweight Chrome extension that provides a clean, distraction-free environment for watching YouTube videos and live streams.
 
-## 🎯 Project Goal
-
-Reduce distractions while watching educational videos by separating video playback from the usual YouTube browsing experience.
+Instead of watching videos on the usual YouTube interface, users can open them in a dedicated FocusPlay tab designed to keep the viewing experience simple and focused.
 
 ## ✨ Features
 
-- **Distraction-free interface:** A minimal, dark-themed video viewing page.
-- **One-click access:** Open a supported YouTube video in FocusPlay using the Chrome extension.
-- **Video playback:** Embed the selected YouTube video in a dedicated player.
-- **Video information:** Display the video title and channel name when metadata is available.
-- **Original video link:** Open the video on YouTube whenever needed.
-- **Responsive design:** Interface adapts to different screen sizes.
+### V1.0 — Distraction-Free Playback
+- Open YouTube videos in a dedicated FocusPlay tab.
+- Support regular YouTube videos and live streams.
+- Minimal, cinematic dark interface.
+- Display video title and channel information.
+- Retain access to YouTube's native playback controls.
+
+### V1.1 — Resume Watching
+- Automatically save video playback progress.
+- Resume videos from the previously saved position.
+- Store progress separately for each video.
+- Clear saved progress when a video finishes.
+- Works with regular videos and tested live streams.
 
 ## 🛠️ Tech Stack
 
+- JavaScript
 - HTML5
 - CSS3
-- JavaScript
 - Chrome Extensions Manifest V3
+- Chrome Storage API
 - YouTube Embedded Player
-- YouTube oEmbed endpoint for video metadata
-
-## 📁 Project Structure
-
-```text
-focusplay_mvp_v1/
-├── manifest.json
-├── background.js
-├── player.html
-├── player.js
-└── README.md
-```
 
 ## 🚀 Installation
 
-1. Clone or download this project to your computer.
-2. Open Google Chrome.
-3. Navigate to `chrome://extensions`.
-4. Enable **Developer mode**.
-5. Click **Load unpacked**.
-6. Select the `focusplay_mvp_v1` project folder.
-7. Open a standard YouTube video.
-8. Click the FocusPlay extension icon to open the video in a new tab.
+1. Clone this repository:
 
-## ⚙️ How It Works
+   ```bash
+   git clone https://github.com/aiharshh/focusplay.git
+   ```
 
-1. The extension detects a supported YouTube video page.
-2. It extracts the video ID and any available start-time parameter.
-3. It opens the FocusPlay player page in a new tab.
-4. The player embeds the selected video and attempts to load its title and channel information.
-5. Users can watch the video in the dedicated interface or return to the original YouTube page.
+2. Open Chrome and navigate to `chrome://extensions/`.
+3. Enable **Developer mode**.
+4. Select **Load unpacked**.
+5. Select the FocusPlay project folder.
+6. Open a YouTube video and click the FocusPlay extension icon.
 
-## 🔬 Current Limitations
+## 🔒 Privacy
 
-- Automatic timestamp seeking is experimental and may not work consistently.
-- Video title and channel information depend on the metadata request succeeding.
-- Some videos may not permit embedding because of creator or YouTube restrictions.
-- The current implementation uses an experimental request-header workaround to address YouTube embed error 153. Its reliability and compliance with YouTube policies and Chrome Web Store requirements must be reviewed before public distribution.
-- Playback and metadata behavior may vary across browsers and videos.
+FocusPlay stores playback progress locally using Chrome Storage. It does not require a FocusPlay account or a separate backend.
 
-## 🗺️ Future Scope
+YouTube remains responsible for video playback and its native controls.
 
-Potential improvements for future versions include:
+## 🗺️ Roadmap
 
-- More reliable timestamp seeking.
-- Support for additional educational platforms.
-- Save for later.
-- Note-taking.
-- Mark videos as completed.
+- [x] Distraction-free video playback
+- [x] Live stream support
+- [x] Resume Watching
+- [ ] Watch History
+- [ ] Notes and timestamped bookmarks
+- [ ] Watch Later
+- [ ] Focus Timer
+- [ ] Learning statistics
+- [ ] AI-powered learning features
 
-These features are intentionally outside the current MVP scope.
+## 📌 Current Version
 
-## 📌 Project Status
+**v1.1.0 — Resume Watching**
 
-**Minimum Viable Product — Under Testing**
+FocusPlay is an actively evolving project. More features will be introduced in future iterations.
 
-FocusPlay is being developed incrementally, prioritizing reliable playback and a distraction-free viewing experience before adding more features.
+---
 
-## 📄 License
-
-No license has been specified yet.
+**One video. One purpose. Your focus.**
